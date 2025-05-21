@@ -1,5 +1,5 @@
 import express from 'express'
-import { deleteBasket, getBasket, postBasket } from '../controllers/basketContoller.js'
+import { deleteBasket, getBasket, postBasket, updateBasketCount } from '../controllers/basketContoller.js'
 import { deleteWishlist, getWishlist, postWishlist } from '../controllers/wishlistContoller.js'
 import { deleteProduct, getProducts, postProduct } from '../controllers/productContoroller.js'
 
@@ -14,6 +14,7 @@ router
     .get('/basket', getBasket)
     .post('/basket', postBasket)
     .delete('/basket/:id', deleteBasket)
+    .patch('/basket/:id', updateBasketCount)
 
     .get('/wishlist', getWishlist)
     .post('/wishlist', postWishlist)

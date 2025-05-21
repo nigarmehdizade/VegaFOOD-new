@@ -55,3 +55,19 @@
     }
   }
 }
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  button {
+    padding: 4px 8px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}

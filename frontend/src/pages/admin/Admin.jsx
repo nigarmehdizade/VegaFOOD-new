@@ -19,9 +19,15 @@ const Admin = () => {
     }, [dispatch]);
 
     const valSchema = Yup.object({
-        name: Yup.string().required('Name is required').min(2, 'Name must be at least 2 characters'),
-        price: Yup.string().required('Price is required').min(1, 'Price must be at least 1 character'),
-        image: Yup.string().required('Image is required').min(2, 'Image must be at least 2 characters')
+        name: Yup.string()
+        .required('Name is required')
+        .min(2, 'Name must be at least 2 characters'),
+        price: Yup.string()
+        .required('Price is required')
+        .min(1, 'Price must be at least 1 character'),
+        image: Yup.string()
+        .required('Image is required')
+        .min(2, 'Image must be at least 2 characters')
     });
 
     const formik = useFormik({
